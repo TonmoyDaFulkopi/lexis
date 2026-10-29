@@ -1,0 +1,12 @@
+<resources>
+    <!--
+      Android 12+ always shows a system launch screen. Make it a plain field of the intro's first
+      colour with no icon, so the animated logo is the only one the user sees.
+    -->
+    <style name="Theme.Lexi.Starting" parent="Theme.Lexi">
+        <item name="android:windowBackground">@color/splash</item>
+        <item name="android:windowSplashScreenBackground">@color/splash</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_blank</item>
+        <item name="android:windowSplashScreenAnimationDuration">0</item>
+    </style>
+</resources>

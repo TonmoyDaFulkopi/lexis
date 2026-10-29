@@ -1,0 +1,22 @@
+<resources>
+    <style name="Theme.Lexi" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <!-- Launch window for MainActivity: the intro's first colour, so opening the app never flashes. -->
+    <style name="Theme.Lexi.Starting" parent="Theme.Lexi">
+        <item name="android:windowBackground">@color/splash</item>
+    </style>
+
+    <style name="Theme.Lexi.Translucent" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>
