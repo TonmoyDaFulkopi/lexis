@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Lexi"
+rootProject.name = "Lexis"
 include(":app")

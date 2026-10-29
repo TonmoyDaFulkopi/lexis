@@ -82,7 +82,7 @@ class DictionaryApi {
                 conn.connectTimeout = 10_000
                 conn.readTimeout = 15_000
                 conn.setRequestProperty("Accept", "application/json")
-                conn.setRequestProperty("User-Agent", "Lexi/1.0 (Android)")
+                conn.setRequestProperty("User-Agent", "Lexis/1.0 (Android)")
                 // Pooled keep-alive sockets go stale while the app sits in the background, which
                 // was the source of the "failed" lookups even with a working connection.
                 conn.setRequestProperty("Connection", "close")

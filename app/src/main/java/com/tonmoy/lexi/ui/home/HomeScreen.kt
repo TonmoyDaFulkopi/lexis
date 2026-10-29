@@ -478,7 +478,7 @@ private fun EmptyState() {
         Text("Collect words as you find them", style = MaterialTheme.typography.titleLarge)
         Spacer(Modifier.height(8.dp))
         Text(
-            "Copy a word anywhere, pull down your quick settings and tap “Save word”. Lexi fetches the meaning for you.",
+            "Copy a word anywhere, pull down your quick settings and tap “Save word”. Lexis fetches the meaning for you.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
@@ -522,7 +522,7 @@ private fun TileBanner() {
                     }
                 }
                 Text(
-                    "Add the Lexi tile to your quick settings. One swipe down and a tap, and the word is saved.",
+                    "Add the Lexis tile to your quick settings. One swipe down and a tap, and the word is saved.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                 )

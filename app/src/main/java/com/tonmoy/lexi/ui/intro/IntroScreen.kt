@@ -92,6 +92,9 @@ private val IntroTop = Color(0xFF041A2C)
 private val IntroBottom = Color(0xFF0E6F86)
 private val Brand = SpineInk
 
+/** The name as the logo spells it: lexis, Greek for "word", written with a schwa. */
+private const val WORDMARK = "ləxis"
+
 private data class Step(val icon: ImageVector, val title: String, val body: String)
 
 private val steps = listOf(
@@ -112,7 +115,7 @@ private const val EXIT_MS = 620
 private val ExitEasing = CubicBezierEasing(0.45f, 0f, 0.15f, 1f)
 
 /**
- * The Spine bookmark drops in like a ribbon settling into a book, "ləxy" pops up its spine
+ * The Spine bookmark drops in like a ribbon settling into a book, "ləxis" pops up its spine
  * letter by letter, then the name and tagline arrive. In [IntroMode.Splash] it then opens onto
  * the app; in [IntroMode.Full] the logo lifts away to reveal how the app works first.
  *
@@ -133,8 +136,8 @@ fun IntroScreen(
     val logoTilt = remember { Animatable(-8f) }
     val logoAlpha = remember { Animatable(0f) }
     val drop = remember { Animatable(-1f) }
-    val spineLetters = remember { List(4) { Animatable(0f) } }
-    val letters = remember { List(4) { Animatable(0f) } }
+    val spineLetters = remember { List(WORDMARK.length) { Animatable(0f) } }
+    val letters = remember { List(WORDMARK.length) { Animatable(0f) } }
     val tagline = remember { Animatable(0f) }
     val lift = remember { Animatable(0f) }
     val stepAnims = remember { List(steps.size) { Animatable(0f) } }
@@ -207,7 +210,7 @@ fun IntroScreen(
             launch { drop.animateTo(0f, spring(dampingRatio = 0.55f, stiffness = Spring.StiffnessMediumLow)) }
             launch { logoScale.animateTo(1f, spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessMediumLow)) }
             launch { logoTilt.animateTo(0f, spring(dampingRatio = 0.4f, stiffness = Spring.StiffnessLow)) }
-            // l, ə, x, y pop up the spine from the bottom.
+            // l, ə, x, i, s pop up the spine from the bottom.
             spineLetters.forEachIndexed { i, a ->
                 launch {
                     delay(260L + i * 75L)
@@ -315,7 +318,7 @@ fun IntroScreen(
             }
             Spacer(Modifier.height(8.dp))
             Row {
-                "Lexi".forEachIndexed { i, c ->
+                WORDMARK.forEachIndexed { i, c ->
                     Text(
                         c.toString(),
                         color = Color.White,

@@ -72,7 +72,7 @@ class WordWidget : GlanceAppWidget() {
         ) {
             Row(modifier = GlanceModifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    "LEXI",
+                    "ləxis",
                     style = TextStyle(
                         color = GlanceTheme.colors.primary,
                         fontSize = 11.sp,

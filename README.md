@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="docs/banner.svg" alt="Lexi: words worth keeping" width="100%">
+  <img src="docs/banner.svg" alt="ləxis: words worth keeping" width="100%">
 </p>
 
 <p align="center">
   <b>An Android app for collecting new words the moment you find them.</b><br>
-  Copy a word anywhere, pull down your quick settings, tap <b>Save word</b>. Lexi does the rest.
+  Copy a word anywhere, pull down your quick settings, tap <b>Save word</b>. Lexis does the rest.
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 ## Contents
 
-- [Why Lexi](#why-lexi)
+- [Why Lexis](#why-lexis)
 - [How it works](#how-it-works)
 - [Features](#features)
   - [Quick Settings tile](#1-quick-settings-tile)
@@ -39,20 +39,20 @@
 
 ---
 
-## Why Lexi
+## Why Lexis
 
 You run into an interesting word while reading an article, a chat or a book. Opening a dictionary,
 then a notes app, then remembering to review it later is enough friction that most words are
 forgotten by the end of the day.
 
-Lexi cuts that down to one swipe and one tap, from inside whatever app you are already using. The
+Lexis cuts that down to one swipe and one tap, from inside whatever app you are already using. The
 meaning, pronunciation and examples are fetched for you in the background, and the words come back
 later as flashcards and on your home screen.
 
 ## How it works
 
 <p align="center">
-  <img src="docs/how-it-works.svg" alt="1. Copy a word. 2. Pull down quick settings and tap Save word. 3. Lexi fetches the meaning." width="100%">
+  <img src="docs/how-it-works.svg" alt="1. Copy a word. 2. Pull down quick settings and tap Save word. 3. Lexis fetches the meaning." width="100%">
 </p>
 
 ```mermaid
@@ -62,7 +62,7 @@ sequenceDiagram
     participant App as Any app
     participant Tile as Save word tile
     participant Sheet as Quick-add sheet
-    participant DB as Lexi database
+    participant DB as Lexis database
     participant Work as Background lookup
     participant Dict as Dictionaries
 
@@ -92,7 +92,7 @@ app becomes: pull down, tap, save.
 
 | What happens | Details |
 |---|---|
-| Tap the tile | A small sheet slides up **over the app you were using**. Lexi doesn't take over the screen. |
+| Tap the tile | A small sheet slides up **over the app you were using**. Lexis doesn't take over the screen. |
 | Clipboard pre-fill | If you just copied a word or short phrase, it's already in the box and selected, so typing replaces it. |
 | What counts as a word | Up to 40 characters and 4 words, containing a letter, and not a link. Stray punctuation from copying is trimmed. |
 | Save | A haptic tick and a check mark, then the sheet closes on its own. **View word** jumps straight to it. |
@@ -101,13 +101,13 @@ app becomes: pull down, tap, save.
 | Locked phone | Tapping the tile asks you to unlock first, then opens the sheet. |
 
 > [!NOTE]
-> Android 10 and later only let apps read the clipboard while they're on screen. Lexi reads it the
-> moment the sheet appears, so on Android 12+ you'll see a small *"Lexi pasted from your
+> Android 10 and later only let apps read the clipboard while they're on screen. Lexis reads it the
+> moment the sheet appears, so on Android 12+ you'll see a small *"Lexis pasted from your
 > clipboard"* notice. That's expected.
 
 ### 2. Automatic meanings
 
-Every saved word is looked up for you. Lexi combines two free dictionaries that need no account
+Every saved word is looked up for you. Lexis combines two free dictionaries that need no account
 or key:
 
 ```mermaid
@@ -196,41 +196,41 @@ flowchart LR
 
 ### 6. Home screen widget
 
-A **Lexi word** widget shows a random word from your collection with its pronunciation, part of
+A **Lexis word** widget shows a random word from your collection with its pronunciation, part of
 speech and meaning. Tap it to open the word, or tap ⟳ for another. It follows your wallpaper
 colours, refreshes when you save words, and invites you to save your first word when the
 collection is empty.
 
 ### 7. Launch animation
 
-Every time you open Lexi, the logo plays a short animation and then opens onto your words.
+Every time you open Lexis, the logo plays a short animation and then opens onto your words.
 
 | Moment | What you see |
 |---|---|
 | 0 ms | The bookmark drops in from above with a soft bounce and a teal glow. |
-| 260 ms | **l · ə · x · y** pop up the bookmark's spine, one letter at a time. |
-| 560 ms | **Lexi** springs up below it. |
+| 260 ms | **l · ə · x · i · s** pop up the bookmark's spine, one letter at a time. |
+| 560 ms | **ləxis** springs up below it. |
 | 860 ms | *Words worth keeping.* fades in. |
 | 1.47 s | A circle opens outward from the logo, revealing your word list as it settles into place. |
 
 - **Tap anywhere** to skip straight to the reveal.
 - The **first launch** also shows three how-it-works cards and a **Get started** button; the
   reveal then opens from the button.
-- The animation is skipped when you open Lexi to a specific word (from the widget or the
-  quick-add sheet), when you return to Lexi while it's still open, and on screen rotation.
+- The animation is skipped when you open Lexis to a specific word (from the widget or the
+  quick-add sheet), when you return to Lexis while it's still open, and on screen rotation.
 - Long-press **Your words** on the home screen to replay the first-launch intro.
 
 ## Install
 
 1. Download `app-release.apk` (or [build it yourself](#build-from-source)).
 2. Open it on your phone. Android will ask to allow installs from that source; allow it once.
-3. Open **Lexi**.
+3. Open **Lexis**.
 
-Lexi needs Android 8.0 or newer. Android 12+ gets wallpaper-matched colours.
+Lexis needs Android 8.0 or newer. Android 12+ gets wallpaper-matched colours.
 
 ## First-time setup
 
-**Add the tile.** This is the one step that makes Lexi useful.
+**Add the tile.** This is the one step that makes Lexis useful.
 
 - **Android 13 and newer:** tap **Add tile** on the banner at the top of your word list, then
   confirm. Done.
@@ -239,18 +239,18 @@ Lexi needs Android 8.0 or newer. Android 12+ gets wallpaper-matched colours.
   2. Tap the pencil (edit) icon.
   3. Drag **Save word** into your active tiles. Placing it in the first row makes it reachable with one swipe.
 
-**Optional: add the widget.** Long-press your home screen, choose **Widgets**, find **Lexi** and
-drag **Lexi word** onto the screen.
+**Optional: add the widget.** Long-press your home screen, choose **Widgets**, find **Lexis** and
+drag **Lexis word** onto the screen.
 
 ## Privacy
 
 - **No account, no sign-in, no tracking, no ads.**
-- Your words, notes and progress are stored **only on your phone**, in Lexi's private database.
+- Your words, notes and progress are stored **only on your phone**, in Lexis's private database.
 - The only data that leaves your phone is **the word itself**, sent to
   [dictionaryapi.dev](https://dictionaryapi.dev) and [Datamuse](https://www.datamuse.com/api/)
   to fetch its meaning.
 - The clipboard is read only while the save sheet is open on screen, and only to pre-fill the box.
-- The only permission Lexi asks for is internet access.
+- The only permission Lexis asks for is internet access.
 
 ## Architecture
 
@@ -399,14 +399,18 @@ The APK is written to `app/build/outputs/apk/release/app-release.apk`. Install i
 
 ## Design
 
-<img src="docs/icon.svg" alt="Lexi app icon" width="96" align="right">
+<img src="docs/icon.svg" alt="Lexis app icon" width="96" align="right">
+
+**The name.** *Lexis* is Greek for **word**, the root of *lexicon* and *lexical*. An app for
+collecting words is named after the word for word.
 
 **The logo, "Spine".** A ribbon bookmark, because the app is about *saving* words, with
-**ləxy** running up it like the title on a book's spine. *ləxy* is Lexi spelled the way a
-dictionary writes pronunciation: the **ə** (schwa) is the most common sound in English and the
-symbol every pronunciation guide uses. The lettering is Fraunces Bold, converted to vector
-outlines so it renders crisply at every size. At Quick Settings size, where four letters can't be
-read, the tile shows the bookmark with just **lə**.
+**ləxis** running up it like the title on a book's spine. The **ə** (schwa) is the most common
+sound in English and the symbol every dictionary uses to show pronunciation, so writing the name
+with it makes the logo read like a dictionary entry. Under the icon the name is plain **Lexis**,
+so typing it in your app drawer's search finds it. The lettering is Fraunces Bold, converted to
+vector outlines so it renders crisply at every size. At Quick Settings size, where five letters
+can't be read, the tile shows the bookmark with just **lə**.
 
 **Colour.** Deep navy `#08304F` to teal `#11809A` for the icon, and `#041A2C` to `#0E6F86` for
 the launch screen. Inside the app, Android 12+ phones use colours drawn from your wallpaper.
@@ -431,7 +435,7 @@ with the bookmark icon. Some phones (MIUI/HyperOS, One UI) place it on a second 
 <details>
 <summary><b>The sheet opens empty even though I copied a word</b></summary>
 
-Lexi only pre-fills text that looks like a word or short phrase: up to 40 characters and 4 words,
+Lexis only pre-fills text that looks like a word or short phrase: up to 40 characters and 4 words,
 with at least one letter, and not a link. A whole sentence or URL is ignored on purpose. You can
 still type or paste it.
 </details>
